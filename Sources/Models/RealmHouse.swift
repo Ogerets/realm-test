@@ -9,11 +9,11 @@ import RealmSwift
 
 internal final class RealmHouse: Object {
 
-    @objc dynamic var houseId: HouseId = 0
+    @objc dynamic var houseId: Int = 0
 
     override class func primaryKey() -> String { "houseId" }
 
-    convenience init(houseId: HouseId) {
+    convenience init(houseId: Int) {
         self.init()
         self.houseId = houseId
     }
