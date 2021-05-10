@@ -10,36 +10,15 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    private let advertsDataService = AdvertsDataService()
     private let housesDataService = HousesDataService()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         print("Launched")
 
-        createHouseWithAdverts()
+        housesDataService.createRealmHouseIfNeeded(withId: 1)
 
         return true
-    }
-
-    private func createHouseWithAdverts() {
-        let houseId = 1
-        let annId1 = "test1"
-        let annId2 = "test2"
-        let advert1 = Advert(annId: annId1, houseId: houseId)
-        let advert2 = Advert(annId: annId2, houseId: houseId)
-
-        let house = House(houseId: houseId, adverts: [advert1, advert2])
-
-        housesDataService.createRealmHousesWithAdvertsCreating(housesWithAdverts: [house], completionQueue: .main) {
-            print("Houses with Adverts created")
-        }
-    }
-
-    private func createNewHouse() {
-        let house = House(houseId: 2)
-        housesDataService.createRealmHouseIfNeeded(usingHouse: house)
-        print("New House created")
     }
 
     // MARK: UISceneSession Lifecycle

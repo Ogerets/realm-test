@@ -8,4 +8,3 @@
 import Foundation
 
 public typealias HouseId = Int
-public typealias AnnId = String
