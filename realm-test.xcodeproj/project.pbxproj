@@ -22,11 +22,11 @@
 		97E1F43A26493E4E007011FB /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F43926493E4E007011FB /* Types.swift */; };
 		97E1F43D26493EA8007011FB /* HousesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F43C26493EA8007011FB /* HousesDataService.swift */; };
 		97E1F44026493EAE007011FB /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F43F26493EAE007011FB /* House.swift */; };
-		CCB5AD5CACE8C4C92D036AE7 /* Pods_realm_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C70AD97E38EC2C4EAE629D4 /* Pods_realm_test.framework */; };
+		AFC57C75D63DBD7B2069FE37 /* Pods_realm_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E8CEF63CFBD8E6E33F02CE /* Pods_realm_test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6C70AD97E38EC2C4EAE629D4 /* Pods_realm_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realm_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		090BC38D755C71FF9DD17CF2 /* Pods-realm-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realm-test.debug.xcconfig"; path = "Target Support Files/Pods-realm-test/Pods-realm-test.debug.xcconfig"; sourceTree = "<group>"; };
 		976AB39126493493000A5AFD /* realm-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "realm-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		976AB39426493493000A5AFD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		976AB39626493493000A5AFD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,8 +44,8 @@
 		97E1F43926493E4E007011FB /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		97E1F43C26493EA8007011FB /* HousesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesDataService.swift; sourceTree = "<group>"; };
 		97E1F43F26493EAE007011FB /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
-		FA80EDBDA18DD2995CBD23E7 /* Pods-realm-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realm-test.release.xcconfig"; path = "Target Support Files/Pods-realm-test/Pods-realm-test.release.xcconfig"; sourceTree = "<group>"; };
-		FFD8A197EFE2830C9AC6F388 /* Pods-realm-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realm-test.debug.xcconfig"; path = "Target Support Files/Pods-realm-test/Pods-realm-test.debug.xcconfig"; sourceTree = "<group>"; };
+		B3E8CEF63CFBD8E6E33F02CE /* Pods_realm_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realm_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBA3211005BFC19132CF6E17 /* Pods-realm-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realm-test.release.xcconfig"; path = "Target Support Files/Pods-realm-test/Pods-realm-test.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,28 +53,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCB5AD5CACE8C4C92D036AE7 /* Pods_realm_test.framework in Frameworks */,
+				AFC57C75D63DBD7B2069FE37 /* Pods_realm_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2DD921AE9380143B6BDE0175 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3E8CEF63CFBD8E6E33F02CE /* Pods_realm_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A3E46B8CC6968585780E056 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FFD8A197EFE2830C9AC6F388 /* Pods-realm-test.debug.xcconfig */,
-				FA80EDBDA18DD2995CBD23E7 /* Pods-realm-test.release.xcconfig */,
+				090BC38D755C71FF9DD17CF2 /* Pods-realm-test.debug.xcconfig */,
+				FBA3211005BFC19132CF6E17 /* Pods-realm-test.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		5E27A50D4DAB40A0EEEBB5CB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6C70AD97E38EC2C4EAE629D4 /* Pods_realm_test.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		976AB38826493493000A5AFD = {
@@ -84,7 +84,7 @@
 				97E1F3ED264935A7007011FB /* Sources */,
 				976AB39226493493000A5AFD /* Products */,
 				3A3E46B8CC6968585780E056 /* Pods */,
-				5E27A50D4DAB40A0EEEBB5CB /* Frameworks */,
+				2DD921AE9380143B6BDE0175 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -189,11 +189,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 976AB3A526493494000A5AFD /* Build configuration list for PBXNativeTarget "realm-test" */;
 			buildPhases = (
-				A517040A5133483A2CC42622 /* [CP] Check Pods Manifest.lock */,
+				333274274EDA5BD6A337CB9E /* [CP] Check Pods Manifest.lock */,
 				976AB38D26493493000A5AFD /* Sources */,
 				976AB38E26493493000A5AFD /* Frameworks */,
 				976AB38F26493493000A5AFD /* Resources */,
-				75D4290F4F7A00FB3E7EEE49 /* [CP] Embed Pods Frameworks */,
+				1E18517C9C977AA358A29D61 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,7 +250,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		75D4290F4F7A00FB3E7EEE49 /* [CP] Embed Pods Frameworks */ = {
+		1E18517C9C977AA358A29D61 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -267,7 +267,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-realm-test/Pods-realm-test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A517040A5133483A2CC42622 /* [CP] Check Pods Manifest.lock */ = {
+		333274274EDA5BD6A337CB9E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -451,7 +451,7 @@
 		};
 		976AB3A626493494000A5AFD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFD8A197EFE2830C9AC6F388 /* Pods-realm-test.debug.xcconfig */;
+			baseConfigurationReference = 090BC38D755C71FF9DD17CF2 /* Pods-realm-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -472,7 +472,7 @@
 		};
 		976AB3A726493494000A5AFD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA80EDBDA18DD2995CBD23E7 /* Pods-realm-test.release.xcconfig */;
+			baseConfigurationReference = FBA3211005BFC19132CF6E17 /* Pods-realm-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
