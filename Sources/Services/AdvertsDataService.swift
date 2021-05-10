@@ -10,6 +10,11 @@ import Foundation
 class AdvertsDataService {
     private lazy var realmStorage = RealmStorage()
 
+    func applyChangesIfPossible(toRealmAdvertWithAnnId annId: AnnId, changes: (RealmAdvert) -> Void) {
+        guard let realmAdvert = getRealmAdvert(forAnnId: annId) else { return }
+        try? realmStorage.apply { changes(realmAdvert) }
+    }
+
     func getRealmAdvert(forAnnId annId: AnnId) -> RealmAdvert? {
         return realmStorage.fetch(ofType: RealmAdvert.self, forPrimaryKey: annId)
     }
