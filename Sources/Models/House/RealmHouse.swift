@@ -7,9 +7,9 @@
 
 import RealmSwift
 
-internal final class RealmHouse: Object {
+internal final class RealmHouse: Object, HouseProtocol {
 
-    @objc dynamic var houseId: Int = 0
+    @objc dynamic var houseId: HouseId = 0
 
     @objc dynamic var viewsCount: Int = 0
 
@@ -19,7 +19,7 @@ internal final class RealmHouse: Object {
 
     override class func primaryKey() -> String { "houseId" }
 
-    convenience init(houseId: Int,
+    convenience init(houseId: HouseId,
                      viewsCount: Int = 0,
                      isSubscriptionEnabled: Bool = false,
                      realmAdverts: [RealmAdvert] = []) {

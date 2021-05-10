@@ -10,9 +10,9 @@ import RealmSwift
 /**
  Class that describes advert that can be saved to Realm.
  */
-internal class RealmAdvert: Object {
+internal class RealmAdvert: Object, AdvertProtocol {
 
-    @objc dynamic var annId: String = ""
+    @objc dynamic var annId: AnnId = ""
     @objc dynamic var isAvailable: Bool = true
 
     @objc dynamic var isViewed: Bool = false
@@ -24,7 +24,7 @@ internal class RealmAdvert: Object {
 
     override class func primaryKey() -> String { "annId" }
 
-    convenience init(annId: String,
+    convenience init(annId: AnnId,
                      isAvailable: Bool = true,
                      isViewed: Bool = false,
                      isFavorite: Bool = false,
