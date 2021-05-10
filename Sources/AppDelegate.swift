@@ -10,13 +10,12 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    private let housesDataService = HousesDataService()
+    private let entitiesDataService = EntitiesDataService()
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        print("Launched")
 
-        housesDataService.createRealmHouseIfNeeded(withId: 1)
+        entitiesDataService.createEntityIfNeeded(withId: 1)
 
         return true
     }
