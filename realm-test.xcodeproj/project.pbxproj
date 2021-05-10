@@ -13,10 +13,10 @@
 		976AB39C26493493000A5AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976AB39A26493493000A5AFD /* Main.storyboard */; };
 		976AB39E26493494000A5AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976AB39D26493494000A5AFD /* Assets.xcassets */; };
 		976AB3A126493494000A5AFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976AB39F26493494000A5AFD /* LaunchScreen.storyboard */; };
-		97E1F4202649365F007011FB /* RealmHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F41F2649365F007011FB /* RealmHouse.swift */; };
+		97E1F4202649365F007011FB /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F41F2649365F007011FB /* Entity.swift */; };
 		97E1F42326493727007011FB /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F42226493727007011FB /* RealmStorage.swift */; };
 		97E1F4282649375E007011FB /* RealmStorage+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F4272649375E007011FB /* RealmStorage+Version.swift */; };
-		97E1F43D26493EA8007011FB /* HousesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F43C26493EA8007011FB /* HousesDataService.swift */; };
+		97E1F43D26493EA8007011FB /* EntitiesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F43C26493EA8007011FB /* EntitiesDataService.swift */; };
 		B3691D6C204AA0EAEF6F9DF5 /* Pods_realm_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3762BF9248A20BDC3568D05 /* Pods_realm_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,10 +30,10 @@
 		976AB39D26493494000A5AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		976AB3A026493494000A5AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		976AB3A226493494000A5AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97E1F41F2649365F007011FB /* RealmHouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHouse.swift; sourceTree = "<group>"; };
+		97E1F41F2649365F007011FB /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		97E1F42226493727007011FB /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
 		97E1F4272649375E007011FB /* RealmStorage+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmStorage+Version.swift"; sourceTree = "<group>"; };
-		97E1F43C26493EA8007011FB /* HousesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesDataService.swift; sourceTree = "<group>"; };
+		97E1F43C26493EA8007011FB /* EntitiesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntitiesDataService.swift; sourceTree = "<group>"; };
 		EBEE2465F26D3F55078D10BD /* Pods-realm-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realm-test.release.xcconfig"; path = "Target Support Files/Pods-realm-test/Pods-realm-test.release.xcconfig"; sourceTree = "<group>"; };
 		F3762BF9248A20BDC3568D05 /* Pods_realm_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_realm_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -98,38 +98,29 @@
 		97E1F3ED264935A7007011FB /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				97E1F42B2649382B007011FB /* Storage */,
 				97E1F4252649372E007011FB /* Services */,
-				97E1F3EF264935D3007011FB /* Controllers */,
-				97E1F3EE264935C7007011FB /* Views */,
 				97E1F3F0264935F3007011FB /* Models */,
+				97E1F3EF264935D3007011FB /* Other */,
 				976AB39426493493000A5AFD /* AppDelegate.swift */,
 				976AB39626493493000A5AFD /* SceneDelegate.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		97E1F3EE264935C7007011FB /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				976AB39A26493493000A5AFD /* Main.storyboard */,
-				976AB39F26493494000A5AFD /* LaunchScreen.storyboard */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		97E1F3EF264935D3007011FB /* Controllers */ = {
+		97E1F3EF264935D3007011FB /* Other */ = {
 			isa = PBXGroup;
 			children = (
 				976AB39826493493000A5AFD /* ViewController.swift */,
+				976AB39A26493493000A5AFD /* Main.storyboard */,
+				976AB39F26493494000A5AFD /* LaunchScreen.storyboard */,
 			);
-			path = Controllers;
+			path = Other;
 			sourceTree = "<group>";
 		};
 		97E1F3F0264935F3007011FB /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				97E1F41F2649365F007011FB /* RealmHouse.swift */,
+				97E1F41F2649365F007011FB /* Entity.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -137,18 +128,11 @@
 		97E1F4252649372E007011FB /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				97E1F43C26493EA8007011FB /* HousesDataService.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
-		97E1F42B2649382B007011FB /* Storage */ = {
-			isa = PBXGroup;
-			children = (
+				97E1F43C26493EA8007011FB /* EntitiesDataService.swift */,
 				97E1F42226493727007011FB /* RealmStorage.swift */,
 				97E1F4272649375E007011FB /* RealmStorage+Version.swift */,
 			);
-			path = Storage;
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +252,9 @@
 				976AB39926493493000A5AFD /* ViewController.swift in Sources */,
 				97E1F4282649375E007011FB /* RealmStorage+Version.swift in Sources */,
 				976AB39526493493000A5AFD /* AppDelegate.swift in Sources */,
-				97E1F4202649365F007011FB /* RealmHouse.swift in Sources */,
+				97E1F4202649365F007011FB /* Entity.swift in Sources */,
 				976AB39726493493000A5AFD /* SceneDelegate.swift in Sources */,
-				97E1F43D26493EA8007011FB /* HousesDataService.swift in Sources */,
+				97E1F43D26493EA8007011FB /* EntitiesDataService.swift in Sources */,
 				97E1F42326493727007011FB /* RealmStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
