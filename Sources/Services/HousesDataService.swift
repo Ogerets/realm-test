@@ -13,15 +13,15 @@ class HousesDataService {
 
     // MARK: Functions
 
-    func getRealmHouse(forHouseId houseId: HouseId) -> RealmHouse? {
+    func getRealmHouse(withId houseId: Int) -> RealmHouse? {
         return realmStorage.fetch(ofType: RealmHouse.self, forPrimaryKey: houseId)
     }
 
-    func createRealmHouseIfNeeded(withId houseId: HouseId) {
-        guard getRealmHouse(forHouseId: houseId) == nil else { return }
+    func createRealmHouseIfNeeded(withId houseId: Int) {
+        guard getRealmHouse(withId: houseId) == nil else { return }
         addRealmHouse(withId: houseId)
     }
-    private func addRealmHouse(withId houseId: HouseId) {
+    private func addRealmHouse(withId houseId: Int) {
         let realmHouse = RealmHouse(houseId: houseId)
         try? realmStorage.apply {
             realmStorage.add(object: realmHouse)
