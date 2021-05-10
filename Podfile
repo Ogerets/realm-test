@@ -6,6 +6,6 @@ target 'realm-test' do
   use_frameworks!
 
   # Pods for realm-test
-  pod 'RealmSwift', '3.21.0'
+  pod 'RealmSwift', '5.5.1'
 
 end

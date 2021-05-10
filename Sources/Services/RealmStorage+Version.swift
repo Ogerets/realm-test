@@ -12,7 +12,7 @@ extension RealmStorage {
     /**
      Current Realm version.
      */
-    static let currentVersion: Version = .v0
+    static let currentVersion: Version = .v1
 
     /**
      All Realm versions with descriptions from the first one.
@@ -22,6 +22,7 @@ extension RealmStorage {
          Standart.
          */
         case v0 = 0
+        case v1 = 1
 
         var numeral: UInt64 {
             return rawValue

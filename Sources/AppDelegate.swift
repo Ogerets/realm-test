@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        entitiesDataService.createEntityIfNeeded(withId: 1)
+        entitiesDataService.createEntityIfNeeded(withId: 2)
 
         return true
     }
