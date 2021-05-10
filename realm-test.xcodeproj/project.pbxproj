@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,10 @@
 		976AB39C26493493000A5AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976AB39A26493493000A5AFD /* Main.storyboard */; };
 		976AB39E26493494000A5AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 976AB39D26493494000A5AFD /* Assets.xcassets */; };
 		976AB3A126493494000A5AFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 976AB39F26493494000A5AFD /* LaunchScreen.storyboard */; };
+		97E1F41C2649361D007011FB /* RealmAdvert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F41B2649361D007011FB /* RealmAdvert.swift */; };
+		97E1F4202649365F007011FB /* RealmHouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F41F2649365F007011FB /* RealmHouse.swift */; };
+		97E1F42326493727007011FB /* RealmStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F42226493727007011FB /* RealmStorage.swift */; };
+		97E1F4282649375E007011FB /* RealmStorage+Version.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97E1F4272649375E007011FB /* RealmStorage+Version.swift */; };
 		CCB5AD5CACE8C4C92D036AE7 /* Pods_realm_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C70AD97E38EC2C4EAE629D4 /* Pods_realm_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +30,10 @@
 		976AB39D26493494000A5AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		976AB3A026493494000A5AFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		976AB3A226493494000A5AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97E1F41B2649361D007011FB /* RealmAdvert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmAdvert.swift; sourceTree = "<group>"; };
+		97E1F41F2649365F007011FB /* RealmHouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmHouse.swift; sourceTree = "<group>"; };
+		97E1F42226493727007011FB /* RealmStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorage.swift; sourceTree = "<group>"; };
+		97E1F4272649375E007011FB /* RealmStorage+Version.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmStorage+Version.swift"; sourceTree = "<group>"; };
 		FA80EDBDA18DD2995CBD23E7 /* Pods-realm-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realm-test.release.xcconfig"; path = "Target Support Files/Pods-realm-test/Pods-realm-test.release.xcconfig"; sourceTree = "<group>"; };
 		FFD8A197EFE2830C9AC6F388 /* Pods-realm-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-realm-test.debug.xcconfig"; path = "Target Support Files/Pods-realm-test/Pods-realm-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,7 +56,6 @@
 				FFD8A197EFE2830C9AC6F388 /* Pods-realm-test.debug.xcconfig */,
 				FA80EDBDA18DD2995CBD23E7 /* Pods-realm-test.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				976AB39326493493000A5AFD /* realm-test */,
+				97E1F3ED264935A7007011FB /* Sources */,
 				976AB39226493493000A5AFD /* Products */,
 				3A3E46B8CC6968585780E056 /* Pods */,
 				5E27A50D4DAB40A0EEEBB5CB /* Frameworks */,
@@ -81,15 +89,58 @@
 		976AB39326493493000A5AFD /* realm-test */ = {
 			isa = PBXGroup;
 			children = (
-				976AB39426493493000A5AFD /* AppDelegate.swift */,
-				976AB39626493493000A5AFD /* SceneDelegate.swift */,
-				976AB39826493493000A5AFD /* ViewController.swift */,
-				976AB39A26493493000A5AFD /* Main.storyboard */,
 				976AB39D26493494000A5AFD /* Assets.xcassets */,
-				976AB39F26493494000A5AFD /* LaunchScreen.storyboard */,
 				976AB3A226493494000A5AFD /* Info.plist */,
 			);
 			path = "realm-test";
+			sourceTree = "<group>";
+		};
+		97E1F3ED264935A7007011FB /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				97E1F4252649372E007011FB /* Services */,
+				97E1F3EF264935D3007011FB /* Controllers */,
+				97E1F3EE264935C7007011FB /* Views */,
+				97E1F3F0264935F3007011FB /* Models */,
+				976AB39426493493000A5AFD /* AppDelegate.swift */,
+				976AB39626493493000A5AFD /* SceneDelegate.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		97E1F3EE264935C7007011FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				976AB39A26493493000A5AFD /* Main.storyboard */,
+				976AB39F26493494000A5AFD /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		97E1F3EF264935D3007011FB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				976AB39826493493000A5AFD /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		97E1F3F0264935F3007011FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				97E1F41B2649361D007011FB /* RealmAdvert.swift */,
+				97E1F41F2649365F007011FB /* RealmHouse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		97E1F4252649372E007011FB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				97E1F42226493727007011FB /* RealmStorage.swift */,
+				97E1F4272649375E007011FB /* RealmStorage+Version.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,8 +258,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				976AB39926493493000A5AFD /* ViewController.swift in Sources */,
+				97E1F4282649375E007011FB /* RealmStorage+Version.swift in Sources */,
 				976AB39526493493000A5AFD /* AppDelegate.swift in Sources */,
+				97E1F4202649365F007011FB /* RealmHouse.swift in Sources */,
 				976AB39726493493000A5AFD /* SceneDelegate.swift in Sources */,
+				97E1F41C2649361D007011FB /* RealmAdvert.swift in Sources */,
+				97E1F42326493727007011FB /* RealmStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
